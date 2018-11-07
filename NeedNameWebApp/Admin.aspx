@@ -8,7 +8,7 @@
     <title>Admin</title>
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/popper.js"></script>
     <script src="Scripts/bootstrap.bundle.js"></script>
 </head>
@@ -36,7 +36,7 @@
             <a class="dropdown-item" href="Addmember.aspx">Add Member</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="ViewQRScanList.aspx">View Recent QR Code Scans</a>
         </div>
       </li>
 

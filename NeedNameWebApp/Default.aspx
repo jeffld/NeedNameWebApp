@@ -37,7 +37,7 @@
             <a class="dropdown-item" href="Addmember.aspx">Add Member</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="ViewQRScanList.aspx">View Recent QR Code Scans</a>
         </div>
       </li>
 

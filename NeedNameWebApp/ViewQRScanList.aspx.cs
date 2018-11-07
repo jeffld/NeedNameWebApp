@@ -16,6 +16,9 @@ namespace NeedNameWebApp
         // got code for pager using Stored procedure here
         // http://www.dotnetawesome.com/2014/02/how-to-implement-custom-paging-in-gridview-using-stored-procedure.html
 
+        // got code for pager styling here
+        // https://parallelcodes.com/styling-the-gridview-in-asp-net/
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
