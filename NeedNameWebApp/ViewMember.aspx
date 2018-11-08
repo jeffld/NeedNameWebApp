@@ -66,6 +66,19 @@
                 <label for="memberName">Member Name</label>
                 <asp:TextBox type="text" class="form-control" ID="memberName" runat="server" />
             </div>
+            
+            
+            <div class="form-group col-sm-12">
+               <h5>Skills List</h5>
+               <asp:GridView ID="GridView2" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" CellSpacing="5" AutoGenerateColumns="false" Width="442px"  onrowcommand="GridView2_RowCommand">
+                    <Columns>
+                        <asp:BoundField DataField="RowNo" HeaderText="#" />
+                        <asp:BoundField DataField="SkillDescription" HeaderText="Description" />
+                    </Columns>
+                </asp:GridView>
+                <%-- Here panel placed for contain Custom button for paging --%>
+                <asp:Panel ID="Panel1" runat="server"></asp:Panel>
+                </div>
 
         </div>
         <!-- End of Container -->

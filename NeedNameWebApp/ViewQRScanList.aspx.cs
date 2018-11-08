@@ -14,7 +14,7 @@ namespace NeedNameWebApp
     public partial class ViewQRScanList : System.Web.UI.Page
     {
 
-        public event System.Web.UI.WebControls.GridViewCommandEventHandler RowCommand;
+        //public event System.Web.UI.WebControls.GridViewCommandEventHandler RowCommand;
 
         // got code for pager using Stored procedure here
         // http://www.dotnetawesome.com/2014/02/how-to-implement-custom-paging-in-gridview-using-stored-procedure.html
