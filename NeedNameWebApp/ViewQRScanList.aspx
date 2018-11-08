@@ -51,12 +51,22 @@
          <h3>Recent QR Code Scans</h3><br />
             <div>
           <form runat="server">
-                <asp:GridView ID="GridView1" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" CellSpacing="5" AutoGenerateColumns="false" Width="442px">
+                <asp:GridView ID="GridView1" runat="server" CssClass="mydatagrid" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" CellSpacing="5" AutoGenerateColumns="false" Width="442px"  onrowcommand="GridView1_RowCommand">
                     <Columns>
                         <asp:BoundField DataField="RowNo" HeaderText="Queue Number" />
                         <asp:BoundField DataField="MemberName" HeaderText="Member Name" />
                         <asp:BoundField DataField="ScanDateTime" HeaderText="ScanDateTime" />
                         <asp:BoundField DataField="ProcessFlag" HeaderText="Process Flag" />
+                        <asp:BoundField DataField="MemberID" HeaderText="MemberID" />
+                        <asp:TemplateField ShowHeader="False">
+                            <ItemTemplate>
+                            <asp:Button ID="showMember" runat="server" 
+                                CausesValidation="false" 
+                                CommandName="ShowMember" 
+                                Text="Process" 
+                                CommandArgument='<%# Eval("MemberID") %>' />
+                            </ItemTemplate>
+                        </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
                 <%-- Here panel placed for contain Custom button for paging --%>

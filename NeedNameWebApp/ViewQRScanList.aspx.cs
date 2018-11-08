@@ -13,6 +13,9 @@ namespace NeedNameWebApp
 {
     public partial class ViewQRScanList : System.Web.UI.Page
     {
+
+        public event System.Web.UI.WebControls.GridViewCommandEventHandler RowCommand;
+
         // got code for pager using Stored procedure here
         // http://www.dotnetawesome.com/2014/02/how-to-implement-custom-paging-in-gridview-using-stored-procedure.html
 
@@ -23,7 +26,8 @@ namespace NeedNameWebApp
         {
             if (!IsPostBack)
             {
-                PopulateData(1, 5);
+                // show top 10
+                PopulateData(1, 10);
             }
 
             AddpagingButton();
@@ -94,6 +98,14 @@ namespace NeedNameWebApp
             // this is for Get data from Database on button (paging button) click
             string pageNo = ((Button)sender).CommandArgument;
             PopulateData(Convert.ToInt32(pageNo), 5);
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName != "ShowMember") return;
+            string iMemberID = e.CommandArgument.ToString();
+            // do something
+            Response.Redirect("ViewMember.aspx?memberid="+iMemberID);
         }
 
     }
