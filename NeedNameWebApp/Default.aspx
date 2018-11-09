@@ -11,7 +11,7 @@
     <script src="Scripts/jquery-3.0.0.js"></script>
     <script src="Scripts/popper.js"></script>
     <script src="Scripts/bootstrap.bundle.js"></script>
-    
+    <script src="Scripts/moment.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,11 +55,17 @@
             <div id="qrcode"></div>
         </div>
 
+          <div style="padding-top:25px;"></div>
+          <button type="button" class="btn btn-primary" onclick="simulateQRCodeScan()">Simulate QR Code Scan</button>
+          <div style="padding-top:25px;"></div>
+          <div id="result"></div>
           </div>
         </main>
 
     
     <script src="js/qrcodefunction.js"></script>
-    <script src="js/qrcode.js"></script>
+    <script src="js/qrcode.js?refresh=2018110901"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>

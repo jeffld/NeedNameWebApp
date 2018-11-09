@@ -6,7 +6,10 @@ var createQRCode = function () {
     $('#qrcode').empty();
     $('#qrcode').qrcode(data);
     $('#qrcode').append('</br><strong>' + data + '</strong>');
+    $("#result").html("");
 };
 
 $('#data').keyup(createQRCode);
 $('#data').change(createQRCode);
+
+

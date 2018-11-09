@@ -17,7 +17,7 @@ namespace NeedNameWebApp.ajax
             string connectionString = null;
             SqlConnection connection = default(SqlConnection);
             SqlCommand DBCmd = default(SqlCommand);
-            
+
             connectionString = ConfigurationManager.ConnectionStrings["SQLDbConnection"].ConnectionString;
             connection = new SqlConnection(connectionString);
             connection.Open();
@@ -58,7 +58,11 @@ namespace NeedNameWebApp.ajax
 
             if (returnValue == "Y")
             {
-                Response.Write(sMemberName);
+                Response.Write(returnValue +"," + sMemberName);
+            }
+            else
+            {
+                Response.Write(returnValue + "," + sMemberName);
             }
 
 
